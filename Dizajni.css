@@ -1,0 +1,469 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial;
+    width: fit-content;
+}
+
+/* Vetia ROOT perdoret si variabel e cila mundeson krijimin e varibalve te css per ti shfrytzuar me vone ne pjes te caktuar stilizuese*/
+:root 
+{
+    --bardh: white;
+    --zi: #000000;
+    --primare: #ff891b;
+    --sekondare: #484848;
+    --gri: #ddd;
+    --grierret: #777777;
+}
+
+
+
+nav 
+{
+    background: var(--sekondare);
+    width: 100%;
+    height: 80px;
+    color: var(--bardh);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+}
+
+label.logo 
+{
+    line-height: 80px; /* E barabartë me lartësinë e navigimit */
+    color: white;
+    padding: 0 20px; /* Për të rregulluar pozicionimin horizontal */
+    font-size: 24px; /* Mund të ndryshoni madhësinë sipas dëshirës tuaj */
+    font-weight: bold; /* Për ta bërë tekstin më të dukshëm */
+    float: left; /* Për ta vendosur atë në të majtë */
+}
+
+nav ul 
+{
+    color: white;
+    float: right;
+    margin-right: 20px;
+    padding: 0 200px;
+
+}
+
+nav ul li 
+{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a 
+{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    text-decoration: none;
+}
+
+a.active,
+a:hover 
+{
+    background: var(--grierret);
+    transition: 0.5s;
+}
+
+.clock
+{
+    font-size:17px;
+    color: white;
+}
+
+
+
+.container {
+    padding: 0 200px;
+}
+
+.hero {
+    background: url(images/kuzhina%20-hero.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.title
+{
+    font-size: 120px;
+    color: white;
+    font-weight: 100;
+    margin-bottom: 35px;
+    padding: 0px 90px 0px 90px;
+    text-align: center;
+}
+ 
+.button-hero
+{
+    display: flex;
+    margin: auto;
+    padding: 13px 50px;
+    background-color: var(--gri);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+}
+ 
+.button-hero:hover
+{
+    background-color: var(--primare);
+    transition: 0.5s;
+}
+
+
+/* Stilizimi i Kategorive */
+ 
+.category
+{
+    height: 100vh;
+    margin-top: 40px;
+}
+ 
+.category h1
+{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+ 
+.category-images
+{
+    display: flex;
+    margin-top: 30px;
+}
+ 
+.category-images img
+{
+    max-width: 400px;
+    margin: 0px 20px;
+    aspect-ratio: 3/2;
+}
+ 
+.content
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-size: cover;
+}
+ 
+#images
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 50px));
+    column-gap: 197px;
+    grid-row-gap: 7px;
+    margin: 18px 100px;
+    margin-bottom: 50px;
+}
+ 
+.filter
+{
+    display: flex;
+    justify-content: center;
+}
+ 
+.button
+{
+    padding: 10px 50px;
+    background-color: var(--primare);
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    margin: 10px 5px;
+}
+
+/* stlizimi i sherbimeve*/
+
+.services
+{
+    display: flex;
+    justify-content: center;
+    margin-right: 50px 0;
+}
+
+.services h1
+{
+    text-align: center;
+    margin: 40px 0;
+    font-size: 40px;
+}
+
+.cards
+{
+    display: flex;
+    width: 100%;
+}
+
+.card
+{
+    padding: 50px 100px;
+    border: none;
+    margin: 0 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0, 0.7), 0 5px 20px 0 rgba(0,0,0, 0.7);
+    width: 70%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.front
+{
+    backface-visibility: hidden;
+}
+
+.back
+{
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    top: 140px;
+    left: 10px;
+    right: 10px;
+}
+
+.back p
+{
+    font-size: 18px;
+    color: var(--primare);
+}
+
+.card.flip
+{
+    transform: rotateX(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.card h2
+{
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--primare);
+    padding-top: 25px;
+}
+
+
+/* stlizimi i pjeses se informatave rreth kompanis */
+
+.projects
+{
+    background-color: var(--primare);
+    width: 100%;
+    height: 180px;
+    margin: 70px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-detalis
+{
+    display: flex;
+    align-items: center;
+}
+
+.projects-detalis h1
+{
+    margin: 40px;
+}
+
+.button-project
+{
+    padding: 20px 60px;
+    background-color:var(--grierret);
+    color: white;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+}
+
+.button-project:hover
+{
+    background-color: var(--sekondare);
+    transition: 0.5s;
+}
+
+/*stlizimi i pjese se qmimores*/
+
+.dimensions-calculation
+{
+    display: flex;
+    justify-content: center;
+    margin: 70px 0px;
+}
+
+.dimensions-calculation h1
+{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+.calculator
+{
+    display: inline-grid;
+}
+
+.calculator label
+{
+    font-size: 23px;
+    padding: 10px 0px;
+}
+
+.calculator input
+{
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid var(--primare);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.calculator img
+{
+    max-width: 650px;
+    margin: 40px auto;
+}
+
+/* Stilizimi i pjeses rreth nesh*/
+.about-us
+{
+    display: flex;
+    justify-content: center;
+    background-color: var(--gri);
+    padding: 40px 0px;
+}
+
+.about-us h1
+{
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0px;
+}
+
+.about-us-content
+{
+    display: flex;
+}
+
+.about-us-content img
+{
+    max-width: 720px;
+    padding: 0px 40px;
+}
+
+.about-us-content p
+{
+    font-size: 18px;
+}
+/*stlizimi i pjese kontaktuese*/
+.contact
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 0;
+}
+.contact h1
+{
+    font-size: 40px;
+    padding: 40px 0;
+}
+.contact-form
+{
+    display: grid;
+}
+.contact-form input
+{
+    width: 600px;
+    height: 50px;
+    padding: 20px;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.3),0 5px 20px 0 rgba(0,0,0,0.3);
+    border: 2p solid var(
+    -primare);
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.contact textarea
+{
+    border: 2px solid var(--primare);
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.3),0 5px 20px 0 rgba(0,0,0,0.3);
+    widows: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+    font-family: Arial;
+        
+}
+
+.contact-form label
+{
+    font-size: 19px;
+    display: flex;
+    padding: 10px 15p;
+}
+
+#send-button
+{
+    background-color: var(--primare);
+    cursor: pointer;
+    font-size: 19px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+#send-button:hover
+{
+    background-color: greenyellow;
+    transition: 0.5s;
+}
+
+/*stilizimi i pjese se fundit te faqes*/
+
+.footer
+{
+    background-color: var(--primare);
+    padding: 70px;
+    text-align: center;
+}
+.footer h4
+{
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
